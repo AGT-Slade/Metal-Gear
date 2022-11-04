@@ -1,0 +1,60 @@
+<%- include('partials/auth_head') %>
+
+<!-- <div class="box">Hellow</div> -->
+
+    <div class="container">
+      <div class="image">
+        <img src="images/Sidebar_Metal_Gear.png">
+      </div>
+      <div class="wrapper">
+        <div class="title-text">
+          <div class="title login">Sign in to Account</div>
+          <div class="title signup">Creat Account</div>
+        </div>
+        <div class="form-container">
+          <div class="slide-controls">
+            <input type="radio" name="slider" id="login" checked>
+            <input type="radio" name="slider" id="signup">
+            <label for="login" class="slide login">Login</label>
+            <label for="signup" class="slide signup">Sign Up</label>
+            <div class="slide-tab"></div>
+          </div>
+          <div class="form-inner">
+            <form class="login" action="/login" method="post">
+              <div class="field">
+                <input type="email" name="username" placeholder="Email Address" required>
+              </div>
+              <div class="field">
+                <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <div class="pass-link"><a href="#">Forgot password?</a></div>
+              <div class="field">
+                <button type="submit" value="login" >Login</button>
+              </div>
+              <div class="signup-link">Not a member? <a href="#">Sign Up now</a> </div>
+            </form>
+
+            <form class="signup" action="/register" method="post">
+              <div class="field">
+                <input type="email" name="email" placeholder="Email Address" required>
+              </div>
+              <div class="field">
+                <input type="password" name="password" placeholder="Password" required>
+              </div>
+              <div class="field">
+                <input type="password" name="passwordConfirm" placeholder="Confirm Password" required>
+              </div>
+              <div class="field">
+                <button type="submit" >Sign Up</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div> 
+
+
+
+  <%- include('partials/auth_footer') %>
